@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Stick No Bills", sans-serif;
+}
+.box {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.relogio {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.container__mask {
+	position: absolute;
+	top: 0.5rem;
+	bottom: 0.5rem;
+	left: 0.5rem;
+	right: 0.5rem;
+	z-index: 1;
+	background-color: black;
+}
+
+.container {
+	width: 50%;
+	height: 15rem;
+	position: relative;
+	border: 0;
+	background: rgb(5, 5, 22);
+	font-size: 10rem;
+	font-weight: 500;
+	color: #fff;
+	border-radius: 10px;
+	background-image: conic-gradient(#488cfb, #29dbbc, #ddf505, #ff9f0e, #e440bb, #655adc, #488cfb);
+	filter: hue-rotate(0);
+	animation: rotate-hue linear 1s infinite;
+	animation-play-state: running;
+}
+.data {
+	color: white;
+	font-size: 5rem;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px rgba(84, 149, 74, 0.539), 0 0 40px rgb(0, 255, 30), 0 0 80px #0ff,
+		0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+}
+@keyframes rotate-hue {
+	to {
+		filter: hue-rotate(1turn);
+	}
+}
